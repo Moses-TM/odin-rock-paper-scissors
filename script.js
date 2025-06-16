@@ -73,25 +73,24 @@ function playGame() {
         }
     }
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 1; i <= 5; i++) {
         let humanChoice = getHumanChoice()
         let computerChoice = getComputerChoice()
-        console.log(humanChoice)
-        console.log(computerChoice)
+        console.log(`ROUND ${i}:`)
+        console.log(`You've chosen ${humanChoice}`)
+        console.log(`The computer chose ${computerChoice}`)
 
         playRound(humanChoice, computerChoice)
-        console.log(humanScore)
-        console.log(computerScore)
     }
 
     if (humanScore > computerScore) {
-        console.log(`You win. Out of 5 rounds, You've won ${humanScore} round/s and the computer won ${computerScore} round/s`)
+        console.log(`You've win. Out of 5 rounds, You've won ${humanScore} round/s and the computer won ${computerScore} round/s.`)
     }
     else if (humanScore < computerScore) {
-        console.log(`You lost. Out of 5 rounds, You've won ${humanScore} round/s and the computer won ${computerScore} round/s`)
+        console.log(`You've lost. Out of 5 rounds, You've won ${humanScore} round/s and the computer won ${computerScore} round/s.`)
     }
     else {
-        console.log("It's a draw.")
+        console.log(`It's a draw. You've won ${humanScore} round/s and the computer won ${computerScore} round/s as well.`)
     }
 }
 
