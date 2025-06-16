@@ -18,48 +18,59 @@ console.log(humanChoice)
 console.log(computerChoice)
 
 function playRound(humanChoice, computerChoice) {
+
     if(humanChoice === "rock"){
-        if(computerChoice === "paper"){
-            console.log("Paper beats Rock. You lost.")
-            computerScore += 1
-        }
-        else if (computerChoice === "scissors"){
-            console.log("Rock beats Scissors. You win.")
-            humanScore += 1
-        }
-        else{
-            console.log("Draw")
+
+        switch(computerChoice){
+            case "rock":
+                console.log("Draw")
+                break
+
+            case "paper":
+                console.log("Paper beats Rock. You lost.")
+                computerScore += 1
+                break
             
+            case "scissors":
+                console.log("Rock beats Scissors. You win.")
+                humanScore += 1
+                break
         }
     }
 
     else if(humanChoice === "paper"){
-        if(computerChoice === "rock"){
-            console.log("Paper beats Rock. You win.")
-            humanScore += 1
-        }
-        else if (computerChoice === "scissors"){
-            console.log("Scissors beats Paper. You lost.")
-            computerScore += 1
-        }
-        else{
-            console.log("Draw")
+        switch(computerChoice){
+            case "rock":
+                console.log("Paper beats Rock. You win.")
+                humanScore += 1
+                break
+
+            case "paper":
+                console.log("Draw")
+                break
             
+            case "scissors":
+                console.log("Scissors beats Paper. You lost.")
+                computerScore += 1
+                break
         }
     }
 
     else{
-        if(computerChoice === "rock"){
-            console.log("Rock beats Scissors. You lost.")
-            computerScore += 1
-        }
-        else if (computerChoice === "paper"){
-            console.log("Scissors beats Paper. You win.")
-            humanScore += 1
-        }
-        else{
-            console.log("Draw")
+        switch(computerChoice){
+            case "rock":
+                console.log("Rock beats Scissors. You lost.")
+                computerScore += 1
+                break
+
+            case "paper":
+                console.log("Scissors beats Paper. You win.")
+                humanScore += 1
+                break
             
+            case "scissors":
+                console.log("Draw")
+                break
         }
     }
 }
