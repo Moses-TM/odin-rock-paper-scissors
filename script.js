@@ -5,4 +5,12 @@ function getComputerChoice(){
             "Scissors"
 }
 
-console.log(getComputerChoice())
+function getHumanChoice (){
+    let humanChoice = prompt("Rock Paper Scissors")
+    return humanChoice
+}
+
+let humanScore = 0
+let computerScore = 0
+
+
