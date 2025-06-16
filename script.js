@@ -25,12 +25,12 @@ function playGame() {
                     break
 
                 case "paper":
-                    console.log("Paper beats Rock. You lost.")
+                    console.log("Paper beats Rock. You've lost.")
                     computerScore += 1
                     break
 
                 case "scissors":
-                    console.log("Rock beats Scissors. You win.")
+                    console.log("Rock beats Scissors. You've won.")
                     humanScore += 1
                     break
             }
@@ -39,7 +39,7 @@ function playGame() {
         else if (humanChoice === "paper") {
             switch (computerChoice) {
                 case "rock":
-                    console.log("Paper beats Rock. You win.")
+                    console.log("Paper beats Rock. You've won.")
                     humanScore += 1
                     break
 
@@ -48,7 +48,7 @@ function playGame() {
                     break
 
                 case "scissors":
-                    console.log("Scissors beats Paper. You lost.")
+                    console.log("Scissors beats Paper. You've lost.")
                     computerScore += 1
                     break
             }
@@ -57,12 +57,12 @@ function playGame() {
         else {
             switch (computerChoice) {
                 case "rock":
-                    console.log("Rock beats Scissors. You lost.")
+                    console.log("Rock beats Scissors. You've lost.")
                     computerScore += 1
                     break
 
                 case "paper":
-                    console.log("Scissors beats Paper. You win.")
+                    console.log("Scissors beats Paper. You've won.")
                     humanScore += 1
                     break
 
@@ -84,7 +84,7 @@ function playGame() {
     }
 
     if (humanScore > computerScore) {
-        console.log(`You've win. Out of 5 rounds, You've won ${humanScore} round/s and the computer won ${computerScore} round/s.`)
+        console.log(`You've won. Out of 5 rounds, You've won ${humanScore} round/s and the computer won ${computerScore} round/s.`)
     }
     else if (humanScore < computerScore) {
         console.log(`You've lost. Out of 5 rounds, You've won ${humanScore} round/s and the computer won ${computerScore} round/s.`)
