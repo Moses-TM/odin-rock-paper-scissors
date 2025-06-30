@@ -1,11 +1,15 @@
-# 🪨📄✂️ Console Rock Paper Scissors
+# 🪨📄✂️ Rock Paper Scissors (Javascript)
 
-A simple JavaScript game played in the console against the computer. Best of 5 rounds wins!
+A simple browser-based Rock Paper Scissors game where the first player to reach 5 points wins. Built with vanilla JavaScript.
 
-## Game Features  
-- 5-round match against the computer
-- Case-insensitive input ("Rock", "ROCK", or "rock" all work)
-- Input validation - only accepts:
-  "rock", "paper", or "scissors"
-- Real-time score tracking
-- Final winner announcement
+## 🎮 How to Play
+1. Click one of the three buttons to make your choice
+2. The computer will randomly select its move
+3. Winner of each round gets 1 point
+4. First to score **5 points** wins the match
+5. Game automatically resets for a new match
+
+## 🛠️ Technical Implementation
+### Core Features
+- **Pure JavaScript** (no frameworks, no CSS)
+- **Button-based UI**
