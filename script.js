@@ -7,42 +7,36 @@ function getComputerChoice() {
 
 function playRound(humanChoice, computerChoice) {
 
-    if (humanChoice === "rock") {
+    if (humanChoice.toLowerCase() === "rock") {
         switch (computerChoice) {
             case "rock":
-                console.log("Draw")
-                result.textContent = "Draw"
+                result.textContent = `Draw. You and the computer both chose ${humanChoice}.`
                 break
 
             case "paper":
-                console.log("Paper beats Rock. You've lost.")
                 result.textContent = "Paper beats Rock. You've lost."
                 computerScore += 1
                 break
 
             case "scissors":
-                console.log("Rock beats Scissors. You've won.")
                 result.textContent = "Rock beats Scissors. You've won."
                 humanScore += 1
                 break
         }
     }
 
-    else if (humanChoice === "paper") {
+    else if (humanChoice.toLowerCase() === "paper") {
         switch (computerChoice) {
             case "rock":
-                console.log("Paper beats Rock. You've won.")
                 result.textContent = "Paper beats Rock. You've won."
                 humanScore += 1
                 break
 
             case "paper":
-                console.log("Draw")
-                result.textContent = "Draw"
+                result.textContent = `Draw. You and the computer both chose ${humanChoice}.`
                 break
 
             case "scissors":
-                console.log("Scissors beats Paper. You've lost.")
                 result.textContent = "Scissors beats Paper. You've lost."
                 computerScore += 1
                 break
@@ -52,20 +46,17 @@ function playRound(humanChoice, computerChoice) {
     else {
         switch (computerChoice) {
             case "rock":
-                console.log("Rock beats Scissors. You've lost.")
                 result.textContent = "Rock beats Scissors. You've lost."
                 computerScore += 1
                 break
 
             case "paper":
-                console.log("Scissors beats Paper. You've won.")
                 result.textContent = "Scissors beats Paper. You've won."
                 humanScore += 1
                 break
 
             case "scissors":
-                console.log("Draw")
-                result.textContent = "Draw"
+                result.textContent = `Draw. You and the computer both chose ${humanChoice}.`
                 break
         }
     }
@@ -74,11 +65,13 @@ function playRound(humanChoice, computerChoice) {
 
     if (humanScore === 5) {
         result.textContent = "Congratulations!! You've won."
+        score.textContent = "Choose again to start a new game."
         humanScore = 0
         computerScore = 0
     }
     else if (computerScore === 5) {
         result.textContent = "You've lost. Better luck next time."
+        score.textContent = "Choose again to start a new game."
         humanScore = 0
         computerScore = 0
     }
@@ -93,10 +86,8 @@ const btn = document.querySelectorAll('button')
 
 btn.forEach((button) => {
     button.addEventListener('click', () => {
-        let humanChoice = button.textContent.toLowerCase()
+        let humanChoice = button.textContent
         let computerChoice = getComputerChoice()
-        console.log(humanChoice)
-        console.log(computerChoice)
         playRound(humanChoice, computerChoice)
     })
 })
